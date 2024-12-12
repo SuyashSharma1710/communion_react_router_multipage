@@ -15,12 +15,12 @@ function Navbar() {
   const Navlist = (
     <ul className="flex gap-8 flex-col lg:flex-row">
       {["Home", "About", "Contact"].map((item) => (
-        <li key={item} onClick={() => setOpenNav(!openNav)} className="hover:underline hover:underline-offset-4 hover:scale-125 transition">
+        <li key={item} onClick={() => setOpenNav(false)} className="hover:underline hover:underline-offset-4 hover:scale-125 transition">
           <Link to={`/${item.toLowerCase()}`}>{item}</Link>
         </li>
       ))}
       <li onClick={() => setOpenNav(!openNav)} className="block lg:hidden hover:underline hover:underline-offset-4 transition hover:scale-125">
-        <Link to="/login">Login/Signup</Link>
+        <Link to="/login">Login</Link>
       </li>
     </ul>
   );
@@ -124,13 +124,13 @@ function Navbar() {
 
   return (
     <div>
-      <div className="place-content-center h-28 mx-auto w-full bg-[#000000ac] shadow-md hover:shadow-2xl shadow-orange-400 rounded-2xl border border-orange-400 my-8 p-8 font-protest text-orange-400">
+      <div className="place-content-center mx-auto w-full bg-[#000000aa] shadow-md hover:shadow-2xl hover:shadow-orange-400 shadow-orange-400 rounded-2xl border border-orange-400 my-8 p-8 font-protest text-orange-400">
         <div className="flex justify-between items-center">
           <h1 className="text-4xl">TECH WORLD</h1>
 
           <div className="hidden lg:block">{Navlist}</div>
           <div className="hidden lg:block hover:underline hover:underline-offset-4 hover:scale-125 transition">
-            <Link to="/login">Login/Signup</Link>
+            <Link to="/login">Login</Link>
           </div>
 
           <div

@@ -1,6 +1,24 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 function Signup() {
+  const [password, setpassword] = useState("");
+  const [conpassword, setconpassword] = useState("");
+  const [errormsg, seterrormsg] = useState("");
+
+  const handlepass = (e) => {
+    setpassword(e.target.value);
+  };
+  const handleconpass = (e) => {
+    setconpassword(e.target.value);
+    seterrormsg("")
+  };
+
+  const handlesubmit = (e) => {
+    e.preventDefault();
+    if (password !== conpassword) {
+      seterrormsg("Passwords did not match!");
+    }
+  };
   const logo = (
     <div className="hover:scale-105 transition w-40 mx-auto lg:w-96">
       <svg
@@ -85,7 +103,7 @@ function Signup() {
 
   return (
     <div>
-      <div className="lg:h-screen p-10 gap-8 box-border w-full flex flex-col lg:flex-row items-center justify-evenly">
+      <div className=" p-10 gap-8 box-border w-full flex flex-col lg:flex-row items-center justify-evenly">
         <div className="">
           {logo}
 
@@ -103,7 +121,7 @@ function Signup() {
             </div>
 
             <div>
-              <form action="">
+              <form onSubmit={handlesubmit} action="">
                 <div className="flex flex-col gap-8 font-oswald text-orange-400">
                   <fieldset className="border-orange-400 border rounded-2xl p-2 hover:shadow-md hover:shadow-orange-400 shadow-sm shadow-orange-400 transition-all">
                     <legend>Name</legend>
@@ -125,6 +143,7 @@ function Signup() {
                       type="email"
                       name="email"
                       placeholder="Eg.johndoe@gmail.com"
+                      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                       required
                     />
                   </fieldset>
@@ -137,6 +156,9 @@ function Signup() {
                       type="password"
                       name="password"
                       placeholder="Eg.Password@1234"
+                      value={password}
+                      onChange={handlepass}
+                      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
                       required
                     />
                   </fieldset>
@@ -148,14 +170,21 @@ function Signup() {
                       className="bg-orange-400 rounded-xl p-1 text-center w-full placeholder-black text-black"
                       type="password"
                       name="password"
+                      value={conpassword}
+                      onChange={handleconpass}
                       placeholder="Eg.Password@1234"
+                      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
                       required
                     />
                   </fieldset>
 
+                  {errormsg && (
+                    <p className="text-red-600 text-center text-sm mt-2">{errormsg}</p>
+                  )}
+
                   <button
                     type="submit"
-                    className="hover:bg-orange-400 hover:shadow-md hover:shadow-orange-300 hover:text-black rounded-full hover:text-2xl transition-all h-10"
+                    className="hover:bg-orange-400 hover:shadow-md hover:shadow-orange-600 hover:text-black rounded-full hover:text-2xl transition-all h-10"
                   >
                     SignUp
                   </button>
@@ -163,13 +192,13 @@ function Signup() {
               </form>
               <div className="font-oswald text-orange-400 text-center mt-4">
                 <p>
-                  Already have an account? 
-                  <a
+                  Already have an account?{" "}
+                  <Link
                     className="text-orange-600 transition-all font-protest"
-                    href="#"
+                    to="/login"
                   >
                     Login
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>

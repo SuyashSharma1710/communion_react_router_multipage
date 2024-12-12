@@ -85,74 +85,76 @@ function Login() {
 
   return (
     <div>
-        <div className="lg:h-screen p-10 gap-8 box-border w-full flex flex-col lg:flex-row items-center justify-evenly">
-          <div className="">
-            {logo}
+      <div className=" p-10 gap-8 box-border w-full flex flex-col lg:flex-row items-center justify-evenly">
+        <div className="">
+          {logo}
 
-            <p className=" hover:scale-105 transition font-protest text-orange-400 text-center">
-              Innovating Events, Transforming Experiences!
-            </p>
-          </div>
+          <p className=" hover:scale-105 transition font-protest text-orange-400 text-center">
+            Innovating Events, Transforming Experiences!
+          </p>
+        </div>
 
-          <div className="w-[80vw] lg:w-[35vw] border border-orange-400 hover:shadow-2xl hover:shadow-orange-400 shadow-md shadow-orange-400 hover:scale-105 transition-all overflow-hidden rounded-2xl ">
-            <div className="p-4">
-              <div>
-                <h1 className="text-2xl text-orange-400 font-protest text-center ">
-                  Login
-                </h1>
-              </div>
+        <div className="w-[80vw] lg:w-[35vw] border border-orange-400 hover:shadow-2xl hover:shadow-orange-400 shadow-md shadow-orange-400 hover:scale-105 transition-all overflow-hidden rounded-2xl ">
+          <div className="p-4">
+            <div>
+              <h1 className="text-2xl text-orange-400 font-protest text-center ">
+                Login
+              </h1>
+            </div>
 
-              <div>
-                <form action="">
-                  <div className="flex flex-col gap-8 font-oswald text-orange-400">
-                    <fieldset className="border-orange-400 border rounded-2xl p-2 hover:shadow-md hover:shadow-orange-400 shadow-sm shadow-orange-400 transition-all">
-                      <legend>Email</legend>
+            <div>
+              <form action="">
+                <div className="flex flex-col gap-8 font-oswald text-orange-400">
+                  <fieldset className="border-orange-400 border rounded-2xl p-2 hover:shadow-md hover:shadow-orange-400 shadow-sm shadow-orange-400 transition-all">
+                    <legend>Email</legend>
 
-                      <input
-                        className="bg-orange-400 rounded-xl p-1 text-center w-full placeholder-black text-black"
-                        type="email"
-                        name="email"
-                        placeholder="Eg.johndoe@gmail.com"
-                        required
-                      />
-                    </fieldset>
+                    <input
+                      className="bg-orange-400 rounded-xl p-1 text-center w-full placeholder-black text-black"
+                      type="email"
+                      name="email"
+                      placeholder="Eg.johndoe@gmail.com"
+                      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                      required
+                    />
+                  </fieldset>
 
-                    <fieldset className="border-orange-400 border rounded-2xl p-2 hover:shadow-md hover:shadow-orange-400 shadow-sm shadow-orange-400 transition-all">
-                      <legend>Password</legend>
+                  <fieldset className="border-orange-400 border rounded-2xl p-2 hover:shadow-md hover:shadow-orange-400 shadow-sm shadow-orange-400 transition-all">
+                    <legend>Password</legend>
 
-                      <input
-                        className="bg-orange-400 rounded-xl p-1 text-center w-full placeholder-black text-black"
-                        type="password"
-                        name="password"
-                        placeholder="Eg.Password@1234"
-                        required
-                      />
-                    </fieldset>
+                    <input
+                      className="bg-orange-400 rounded-xl p-1 text-center w-full placeholder-black text-black"
+                      type="password"
+                      name="password"
+                      placeholder="Eg.Password@1234"
+                      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                      required
+                    />
+                  </fieldset>
 
-                    <button
-                      type="submit"
-                      className="hover:bg-orange-400 hover:shadow-md hover:shadow-orange-300 hover:text-black rounded-full hover:text-2xl transition-all h-10"
-                    >
-                      Login
-                    </button>
-                  </div>
-                </form>
-                <div className="font-oswald text-orange-400 text-center mt-4">
-                  <p>
-                    Don't have an account?{" "}
-                    <Link
-                      to="/signup"
-                      className="text-orange-600 transition-all font-protest"
-                      href="#"
-                    >
-                      Signup
-                    </Link>
-                  </p>
+                  <button
+                    type="submit"
+                    className="hover:bg-orange-400 hover:shadow-md hover:shadow-orange-600 hover:text-black rounded-full hover:text-2xl transition-all h-10"
+                  >
+                    Login
+                  </button>
                 </div>
+              </form>
+              <div className="font-oswald text-orange-400 text-center mt-4">
+                <p>
+                  Don't have an account?{" "}
+                  <Link
+                    to="/signup"
+                    className="text-orange-600 transition-all font-protest"
+                    href="#"
+                  >
+                    Signup
+                  </Link>
+                </p>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </div>
   );
 }
