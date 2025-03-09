@@ -149,11 +149,11 @@ const Events = () => {
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="h-[200px] sm:w-full md:w-80 grid place-content-center"
+          className="h-[200px] sm:w-full md:w-80 grid place-content-center "
         >
           <button
             onClick={openPopup}
-            className="bg-orange-400 text-black w-full font-oswald font-bold sm:w-40 px-6 py-2 rounded-full"
+            className="bg-orange-400 text-black w-full font-oswald shadow-[0_0_30px_30px_black] font-bold sm:w-40 px-6 py-2 rounded-full"
           >
             Add Event
           </button>
