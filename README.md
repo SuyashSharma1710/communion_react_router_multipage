@@ -1,33 +1,24 @@
-# 📞 Contact Page
+# Communion - Multi-Page React Router Application
 
-This is a **responsive** and **animated** contact page built using **React, Tailwind CSS, and Framer Motion**. It includes a Google Maps embed, a query form, and smooth animations for better user experience.
+🚀 **Communion** is a multi-page event management platform built using **React Router**. This project provides seamless navigation, event listings, and an interactive contact section with Google Maps integration.
 
-## 🚀 Features
+## 📌 Features
 
-- 📌 **Google Maps Embed** – Displays location with iframe.
-- 🎨 **Responsive Design** – Works on all screen sizes.
-- 🎥 **Framer Motion Animations** – Smooth transitions and effects.
-- 📝 **Contact Form** – Users can submit their queries.
-- 🎭 **Hover & Click Effects** – Interactive elements.
+- **Multi-Page Navigation** with React Router
+- **Event Management** (Search, Filter, and Add Events)
+- **Google Maps Integration**
+- **Responsive Design** with Tailwind CSS
+- **Smooth Animations** using Framer Motion
 
-## 🖥️ Technologies Used
+---
 
-- **React.js** – Component-based UI
-- **Tailwind CSS** – Utility-first styling
-- **Framer Motion** – Animations
-- **Google Maps API** – Location embedding
+## 🛠 Installation & Setup
 
-## 📸 Screenshots
+Clone the repository:
 
-![Contact Page Preview](https://via.placeholder.com/800x400)  
-*(Replace with actual screenshot)*
-
-## 🛠️ Installation & Usage
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/contact-page.git
-   cd contact-page
+```bash
+git clone https://github.com/SuyashSharma1710/communion_react_router_multipage.git
+cd communion_react_router_multipage
 ```
 
 2. Install dependencies:
