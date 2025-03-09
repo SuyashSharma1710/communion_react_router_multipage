@@ -1,11 +1,16 @@
 import React from "react";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Login from "./pages/Login"
-import Signup from "./pages/Signup"
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import Footer from "./components/Footer";
 import Events from "./pages/Events";
 
@@ -22,8 +27,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} /> 
-          <Route path="/events" element={<Events />} /> 
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/events" element={<Events />} />
         </Routes>
         <div className=" p-4 ">
           <Footer />

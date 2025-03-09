@@ -10,7 +10,7 @@ function Signup() {
   };
   const handleconpass = (e) => {
     setconpassword(e.target.value);
-    seterrormsg("")
+    seterrormsg("");
   };
 
   const handlesubmit = (e) => {
@@ -179,7 +179,9 @@ function Signup() {
                   </fieldset>
 
                   {errormsg && (
-                    <p className="text-red-600 text-center text-sm mt-2">{errormsg}</p>
+                    <p className="text-red-600 text-center text-sm mt-2">
+                      {errormsg}
+                    </p>
                   )}
 
                   <button

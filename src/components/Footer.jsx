@@ -115,20 +115,6 @@ function Footer() {
       <div className="text-center text-sm border-t border-orange-400 mt-6 pt-4">
         &copy; {new Date().getFullYear()} Communion App. All rights reserved.
       </div>
-
-      {/* <div className="max-w-6xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-      
-       
-       
-
-       
-       
-      </div>
-
-   
-      
-    */}
     </div>
   );
 }

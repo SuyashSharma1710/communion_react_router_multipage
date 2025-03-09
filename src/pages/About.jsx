@@ -4,14 +4,13 @@ import img1 from "../assets/aboutimg.avif";
 
 function About() {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
       className="text-orange-400 w-full"
     >
-      {/* Heading Section */}
-      <motion.div 
+      <motion.div
         className="p-8"
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -23,8 +22,7 @@ function About() {
         </p>
       </motion.div>
 
-      {/* Description Section */}
-      <motion.div 
+      <motion.div
         className="p-8"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -36,11 +34,8 @@ function About() {
         </p>
       </motion.div>
 
-      {/* Image and Text Section */}
       <div className="flex flex-col md:flex-row justify-evenly w-full p-10">
-        
-        {/* Image with Fade-in Animation */}
-        <motion.div 
+        <motion.div
           className="overflow-hidden rounded-2xl flex-1"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -53,8 +48,7 @@ function About() {
           />
         </motion.div>
 
-        {/* Text Section with Slide-in Animation */}
-        <motion.div 
+        <motion.div
           className="flex flex-1 justify-start flex-col py-8 md:py-0 md:px-10"
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -62,13 +56,16 @@ function About() {
         >
           <h1 className="font-protest text-4xl">WORK</h1>
           <p className="py-8 text-justify">
-            We help individuals and organizations discover, create, and participate in events that matter. 
-            Whether it's religious gatherings, social meetups, or charity initiatives, Communion App provides 
-            a space where people can come together, share experiences, and grow as a community.
+            We help individuals and organizations discover, create, and
+            participate in events that matter. Whether it's religious
+            gatherings, social meetups, or charity initiatives, Communion App
+            provides a space where people can come together, share experiences,
+            and grow as a community.
             <br /> <br />
-            Communion App is a platform dedicated to connecting people of all faiths through events, discussions, 
-            and community support. We believe in fostering inclusivity, understanding, and meaningful connections 
-            among diverse communities.
+            Communion App is a platform dedicated to connecting people of all
+            faiths through events, discussions, and community support. We
+            believe in fostering inclusivity, understanding, and meaningful
+            connections among diverse communities.
           </p>
         </motion.div>
       </div>

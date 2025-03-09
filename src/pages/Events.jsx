@@ -89,7 +89,6 @@ const Events = () => {
         </p>
       </motion.div>
 
-
       <div className="flex justify-between items-center flex-wrap gap-4 p-4">
         <motion.input
           type="text"
@@ -129,26 +128,24 @@ const Events = () => {
         </div>
       </div>
 
-   
       <div className="grid grid-cols-1 md:grid-cols-2 place-items-center lg:grid-cols-3 gap-6 p-6">
-      {filteredEvents.length > 0 ? (
-  filteredEvents.map((event, index) => ( 
-    <motion.div
-      key={event.id}
-      initial={{ opacity: 0, y: 50 }}
-      whileHover={{ scale: 1.025, delay:0 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6,}} 
-      viewport={{ once: true, amount: 0.3 }}
-    >
-      <Eventcard {...event} />
-    </motion.div>
-  ))
-) : (
-  <p className="text-center col-span-3 text-lg">No events found.</p>
-)}
+        {filteredEvents.length > 0 ? (
+          filteredEvents.map((event, index) => (
+            <motion.div
+              key={event.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileHover={{ scale: 1.025, delay: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <Eventcard {...event} />
+            </motion.div>
+          ))
+        ) : (
+          <p className="text-center col-span-3 text-lg">No events found.</p>
+        )}
 
-      
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
@@ -163,7 +160,6 @@ const Events = () => {
         </motion.div>
       </div>
 
-
       <AnimatePresence>
         {isPopupOpen && (
           <motion.div
@@ -177,9 +173,9 @@ const Events = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.7, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-black p-6 rounded-lg w-96 text-orange-400 border-2 border-orange-400"
+              className="bg-black p-6 rounded-lg w-96 text-orange-600 border-2 border-orange-400"
             >
-              <h2 className="text-2xl mb-4">Create Event</h2>
+              <h2 className="text-2xl mb-4 text-orange-400">Create Event</h2>
               <input
                 type="text"
                 name="title"

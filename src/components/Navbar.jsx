@@ -7,7 +7,7 @@ function Navbar() {
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
-  }, [location.pathname]); // Scroll to top whenever route changes
+  }, [location.pathname]);
 
   React.useEffect(() => {
     const handleResize = () => {
