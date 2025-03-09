@@ -96,13 +96,16 @@ const Home = () => {
             Events
           </motion.h3>
 
-          {/* Event Cards with Hover Animation */}
+          {/* Event Cards Animation on Scroll */}
           <div className="grid grid-cols-1 md:grid-cols-2 place-items-center lg:grid-cols-3 gap-6 p-6">
-            {events.slice(0, 3).map((event) => (
+            {events.slice(0, 3).map((event, index) => (
               <motion.div
                 key={event.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true, amount: 0.3 }}
                 whileHover={{ scale: 1.025 }}
-                transition={{ type: "spring", stiffness: 50 }}
               >
                 <Eventcard
                   id={event.id}

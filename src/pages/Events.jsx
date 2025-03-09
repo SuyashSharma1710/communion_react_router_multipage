@@ -102,7 +102,7 @@ const Events = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
         />
 
-        <div className="flex justify-center gap-3 flex-wrap">
+        <div className="flex justify-center font-oswald  gap-3 flex-wrap">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
@@ -131,23 +131,22 @@ const Events = () => {
 
    
       <div className="grid grid-cols-1 md:grid-cols-2 place-items-center lg:grid-cols-3 gap-6 p-6">
-        <AnimatePresence>
-          {filteredEvents.length > 0 ? (
-            filteredEvents.map((event) => (
-              <motion.div
-                key={event.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-              >
-                <Eventcard {...event} />
-              </motion.div>
-            ))
-          ) : (
-            <p className="text-center col-span-3 text-lg">No events found.</p>
-          )}
-        </AnimatePresence>
+      {filteredEvents.length > 0 ? (
+  filteredEvents.map((event, index) => ( 
+    <motion.div
+      key={event.id}
+      initial={{ opacity: 0, y: 50 }}
+      whileHover={{ scale: 1.025, delay:0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6,}} 
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      <Eventcard {...event} />
+    </motion.div>
+  ))
+) : (
+  <p className="text-center col-span-3 text-lg">No events found.</p>
+)}
 
       
         <motion.div
@@ -157,7 +156,7 @@ const Events = () => {
         >
           <button
             onClick={openPopup}
-            className="bg-orange-400 text-black w-full sm:w-40 px-6 py-2 rounded-full"
+            className="bg-orange-400 text-black w-full font-oswald font-bold sm:w-40 px-6 py-2 rounded-full"
           >
             Add Event
           </button>
