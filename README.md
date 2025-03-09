@@ -14,7 +14,7 @@
 
 ## 🛠 Installation & Setup
 
-Clone the repository:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/SuyashSharma1710/communion_react_router_multipage.git
