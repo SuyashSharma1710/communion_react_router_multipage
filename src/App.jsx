@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Footer from "./components/Footer";
 import Events from "./pages/Events";
+import preview from "./assets/preview.jpg"
 
 function App() {
   return (

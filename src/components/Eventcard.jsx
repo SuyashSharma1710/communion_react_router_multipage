@@ -12,7 +12,7 @@ const Eventcard = ({
 }) => {
   return (
     <div key={id}>
-      <div className=" h-[420px] sm:w-full md:w-80 border-orange-400 border-2 p-4 overflow-hidden rounded-xl">
+      <div className=" h-[420px] sm:w-full md:w-80 border-orange-400 border-2 p-4 overflow-hidden rounded-xl bg-[#000000da]">
         <div className="w-full bg-black h-[200px] drop-shadow-[0_0_5px_#fb923c] shadow-orange-400 rounded-xl overflow-hidden">
           <img src={image} alt={title} className="h-full w-full object-cover" />
         </div>
