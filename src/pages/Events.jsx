@@ -128,7 +128,7 @@ const Events = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1  mix-blend-screen  bg-[url(../src/assets/abs.jpg)] bg-cover bg-repeat-y shadow-insetBlack md:grid-cols-2 place-items-center lg:grid-cols-3 gap-6 p-6">
+      <div className="grid grid-cols-1  mix-blend-screen  bg-[url(../src/assets/abs.jpg)] bg-contain bg-repeat-y shadow-insetBlack md:grid-cols-2 place-items-center lg:grid-cols-3 gap-6 p-6">
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event, index) => (
             <motion.div
