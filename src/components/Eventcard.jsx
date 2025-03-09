@@ -17,7 +17,7 @@ const Eventcard = ({
           <img src={image} alt={title} className="h-full w-full object-cover" />
         </div>
 
-        <div className="p-4">
+        <div className="p-4 font-oswald">
           <h2 className="text-xl font-semibold text-orange-400">{title}</h2>
           <p className="text-sm text-gray-400">
             {date} • {time}
