@@ -184,39 +184,39 @@ const Events = () => {
                 type="text"
                 name="title"
                 placeholder="Title"
-                className="w-full p-2 rounded-xl bg-black border-2 border-orange-400  mb-2"
+                className="w-full p-2 rounded-xl bg-orange-100 border-2 border-orange-400  mb-2"
                 onChange={handleChange}
               />
               <input
                 type="date"
                 name="date"
-                className="w-full p-2 rounded-xl bg-black border-2 border-orange-400  mb-2"
+                className="w-full p-2 rounded-xl bg-orange-100 border-2 border-orange-400  mb-2"
                 onChange={handleChange}
               />
               <input
                 type="time"
                 name="time"
-                className="w-full p-2  rounded-xl bg-black border-2 border-orange-400  mb-2"
+                className="w-full p-2  rounded-xl bg-orange-100 border-2 border-orange-400  mb-2"
                 onChange={handleChange}
               />
               <input
                 type="text"
                 name="location"
                 placeholder="Location"
-                className="w-full p-2 rounded-xl bg-black border-2 border-orange-400  mb-2"
+                className="w-full p-2 rounded-xl bg-orange-100 border-2 border-orange-400  mb-2"
                 onChange={handleChange}
               />
               <input
                 type="text"
                 name="category"
                 placeholder="Category"
-                className="w-full p-2  rounded-xl bg-black border-2 border-orange-400  mb-2"
+                className="w-full p-2  rounded-xl bg-orange-100 border-2 border-orange-400  mb-2"
                 onChange={handleChange}
               />
               <textarea
                 name="description"
                 placeholder="Description"
-                className="w-full p-2  rounded-xl bg-black border-2 border-orange-400  mb-2"
+                className="w-full p-2  rounded-xl bg-orange-100 border-2 border-orange-400  mb-2"
                 onChange={handleChange}
               ></textarea>
 
